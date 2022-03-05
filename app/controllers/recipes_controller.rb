@@ -29,6 +29,12 @@ class RecipesController < ApplicationController
     # 編集したレシピのページへ遷移する
   end
 
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
+    redirect_to recipes_path
+  end
+
   private
   def recipe_params
     params.require(:recipe).permit(:title, :body, :image)
