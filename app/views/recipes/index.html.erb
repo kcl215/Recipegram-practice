@@ -36,6 +36,9 @@
                   <div class="title"><%=link_to recipe.user.username, user_path(recipe.user) %></div>
                   <!--ユーザー名を表示させ、そこにユーザー詳細ページへ遷移させるリンクを埋め込む-->
                 </div>
+                <!--<small>
+                <%= recipe.user.email %>
+                </small>-->
               </div>
               <div class="content">
                 <time><%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
